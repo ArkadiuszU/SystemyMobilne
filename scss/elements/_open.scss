@@ -1,0 +1,117 @@
+@use "sass:list";
+
+.open
+{
+    .open-header
+    {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        height: 70vh;
+        h1
+        {
+            &::after
+            {
+                background-color: $color-primary;
+                content: '';
+                height: 2px;
+                width: 80%;
+                display: block;
+                margin: auto;
+                margin-top: 2vh;
+            }
+            margin: 2%;
+        }
+    }
+    .content
+    {
+        h1
+        {
+            text-align: center;
+            margin: 8%;
+        }
+        .open-container
+        {
+            height: 60vh;
+            display:flex;
+            justify-content: space-around;
+            .left-box
+            {
+                background-image: url(../assets/church2.jpg);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .right-box
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+              p{
+                  font-size: 20px;
+                  font-family: $font-source-sans-pro;
+                  text-align: justify;
+                  text-justify: inter-word;
+              }
+            }
+            
+        }
+    }
+}
+
+
+.futures
+{
+    h1
+    {
+        text-align: center;
+        margin: 10%;
+    }
+    height: 50vw;
+    .row
+    {
+        display:flex;
+        justify-content: space-between;
+        margin-bottom: 10%;
+        .column
+        {
+            position: relative;
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            .circle 
+            {
+                position: absolute;
+                top: 0; 
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+            }
+
+            @for $i from 1 through 6 
+            {
+                @debug($i);
+                .feature-#{$i}
+                {
+                    background-color: list.nth($futures-colors, $i);
+                }
+            }
+
+            img
+            {
+                position: absolute ;
+                top: 5%;
+                left: 48%;
+            }
+
+            p
+            {
+                position: absolute;
+                top: 10vh;
+                text-align: center;
+                font-size: 15px; 
+            }
+        }
+    }
+}

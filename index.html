@@ -24,8 +24,8 @@
             <ul class="header__nav">
               <li class="nav__element"><a href="#goals" class="nav__link">Dla kogo</a></li>
               <li class="nav__element"><a href="#futures" class="nav__link">Funkcje systemu</a></li>
-              <li class="nav__element"><a href="#prices" class="nav__link">Prices</a></li>
-              <li class="nav__element"><a href="#contact" class="nav__link">Contact</a></li>
+              <li class="nav__element"><a href="#architecture" class="nav__link">Architektura</a></li>
+              <li class="nav__element"><a href="#advantages" class="nav__link">Zalety</a></li>
             </ul>
           </nav>
         </div>
@@ -34,19 +34,16 @@
     <div class= container>
 
         <section class="open row">
-
             <div class="open-header col-12">
                 <h1>ZINTEGROWANY SYSTEM KONTROLI OBŁOŻENIA W MIEJSCACH KULTU RELIGIJNEGO</h1>
                 <p>System umożliwiający kontrolę liczby wiernych przebywających w światyni</p>
                 <p>Stworzony z myślą o bezpieczeństwie w czasach pandemii</p>
             </div>
-
             <div class="content col-12" id="goals">
                 <h1> Cel i przeznaczenie systemu</h1>
                 <div class= "open-container row">
-                    <div class="left-box col-5"> </div>
-                    <div class="right-box col-5">
-                        
+                    <div class="box left-box col-5"> </div>
+                    <div class="box right-box col-5">
                         <p> Głównym celem systemu jest zapewnienie bezpieczeństwa grupom wyznaniowym podczas ich zgromadzeń. W obecnym czasie pandemii podstawą do zapewnienia takiego bezpieczeństwa w miejscach kultu religijnego jest nadzór nad liczbą przebywających w nich wiernych. 
                             Na osoby administrujące świątynie narzucane są ograniczenia państwowe  dotyczące dopuszczalnej ilości wiernych przebywających jednocześnie na jej terenie z uwzględnieniem jej wielkości. 
                         </p>
@@ -54,12 +51,7 @@
                             Z pomocą w sprostaniu dynamicznie zmieniającym się wymogom przychodzi  “Zintegrowany system kontroli obłożenia w miejscach kultu religijnego”. 
                             System spełnia swoją rolę niezależnie od tego w jakiej świątyni zostanie zainstalowany przez co skierowany jest do wszelakich grup wyznaniowych. 
                             Beneficjentami korzyści płynących z zastosowania systemu są nie tylko osoby odpowiedzialne za  miejsca modlitwy ale także sami wierni którym system zapewnia  bezpieczeństwo i komfort.  
-
                         </p>
-                        
-
-                        
-        
                     </div>
                 </div>
             </div>
@@ -104,6 +96,122 @@
                 </div>
             </div>
         </section>
+
+        <section class="architecture" id="architecture">
+            <h1> Architektura systemu i wykorzystany sprzęt</h1>
+
+        
+            <div class=" container row">
+
+                <div class="box col-10 local">
+                    <div class="txt col-7">
+                        <h1>Lokalny obszar systemu</h1>
+                    </div>
+                    <div class="img col-5">
+                        <div class=image> </div>
+                        <div class="back-element"></div>
+                    </div>
+                </div>
+
+                <div class="scheme col-12"></div>
+
+                <div class = "description col-10">
+
+                   <p> W skład systemu lokalnego wchodzą: bramki wejściowe, serwer lokalny oraz panel administracyjny. Zliczanie wiernych wchodzących i wychodzących z świątyni ma miejsce poprzez umieszczone w bramkach wejściowych sensorów optycznych wykrywających przejście osoby przez bramkę. Urządzenie to posiada mechanizm bramy uchylnej umożliwiający i zabraniający wstępu do budynku w zależności od stanu liczebności wiernych znajdujących się wewnątrz. Podejmowanie decyzji o pozwoleniu na wstęp do budynku odbywa się na serwerze lokalnym, do którego, w sposób bezprzewodowy, połączone są poszczególne bramki wejściowe. Ważną cechą urządzenia, z przyczyn rygoru sanitarnego, jest jego całkowicie bezdotykowa obsługa. Obecność osoby chcącej uzyskać dostęp do budynku wykrywana jest poprzez czujniki nacisku umiejscowione w macie znajdującej się w wyznaczonym miejscu przed bramką, a następnie, jeżeli wejście jest dozwolone, brama uchylna otwiera się samoczynnie. Zamontowany w urządzeniu czytnik kodów QR umożliwia aby również egzekwowanie rezerwacji odbywało się bez potrzeby dotykania dłońmi urządzenia. </p>
+
+                   <p>W jednym z pomieszczeń w świątyni konieczne jest wyznaczenie miejsca dla serwera lokalnego oraz panelu administratora. Pierwszą z głównych ról, realizowanego na serwerze programu, jest komunikacja z bramkami wejściowymi oraz wykonywanie algorytmu liczenia wiernych. Na podstawie danych odbieranych z bramek wejściowych algorytm podejmuje też decyzję o tym czy może wpuścić kolejną osobę do budynku. Ważnymi czynnikami podczas podejmowania decyzji, szczególnie przy zbliżaniu się do maksymalnej wartości oblozenia, jest liczba pozostałych miejsc wolnych oraz zarezerwowanych, a także uwzględnienie synchronizacji otwierania bramek tak aby nie pozwolić na wejście zbyt dużej ilości osób. Drugim kluczowym zadaniem serwera jest przygotowanie oraz publikacja danych pochodzących z obszaru lokalnego do architektury systemu w chmurze. Panel administracyjny natomiast pozwala osobie zarządzającej systemem lokalnym na podgląd stanu serwera oraz parametryzację pracy układu.</p>
+
+
+                </div>
+
+                <div class="box col-10 cloud">
+                    <div class="img col-5">
+                        <div class = "back">
+                            <div class = "image"></div>
+                        </div>
+                    </div>
+                    <div class="txt col-7">
+                        <h1>Warstwa architektury w chmurze</h1>                    
+                    </div>
+                </div>
+
+                <div class = "description col-10">
+
+                    <p> 
+                        Zastosowanie w systemie technologii chmurowej niesie ze sobą wiele korzyści. Od strony sprzętowej jest to ograniczenie wymaganych stacjonarnie zasobów a w momencie zmiany zapotrzebowania łatwą skalowalność oraz większe uniezależnienie systemu od awarii sprzętowej. Podejście to niesie ze sobą również korzyści finansowe wynikające z ponoszenia opłat jedynie za wykorzystane usługi. Poprzez moc obliczeniową chmury realizowane są aspekty globalnej części systemu takie jak: 
+                        uwierzytelnianie systemów lokalnych,
+                        serwery RESTful API, pierwszy przeznaczony do umieszczania danych w chmurze przez poszczególne systemy lokalne oraz drugi, wykorzystywany przez aplikacje  mobilne,
+                        bazy danych: globalna, zawierająca informację niezbędne do działania aplikacji mobilnej oraz bazy danych wyodrębnione dla każdej lokalnej struktury z niższej warstwy systemu. 
+
+                    </p>
+ 
+                 </div>
+
+                <div class="box col-10 app">
+                    <div class="txt col-7">
+                        <h1>Aplikacja mobilna</h1>
+                    </div>
+                    <div class="img col-5">
+                        <div class=image> </div>
+                        <div class="back-element"> </div>
+                    </div>
+                </div>
+
+                <div class = "description col-10">
+
+                    <div class = "row description-map">
+
+                        <div class="col-6">
+                            <p> 
+                                Ostatnim obszarem który można wyodrębnić w systemie jest aplikacja mobilna. Aplikacja ta nie jest przeznaczona wprost dla bezpośrednich klientów, którymi są osoby zarządzające świątyniami, lecz dla każdego wiernego chcącego korzystać z funkcjonalności jakie daje “Zintegrowany system kontroli obłożenia w miejscach kultu religijnego”. Po pobraniu darmowej aplikacji, wierni mają dostęp do informacji o aktualnym stanie wolnych miejsc w interesujących ich budynkach religijnych. Informacje te przedstawione są w aplikacji za pomocą mapy wraz z umieszczonymi na niej znacznikami sygnalizującymi aktualny stan panujący w danej świątyni. Za pośrednictwem aplikacji użytkownicy mogą również dokonać rezerwacji miejsca lub zadeklarować przybycie do świątyni w danym czasie. Są to niezmiernie przydatne funkcje dla całych społeczności wyznaniowych. Pozwalają one wybrać najbardziej optymalną dla siebie porę i miejsce, przez co obłożenie rozkłada się równomiernie w czasie, co w kolejności prowadzi do znacznej poprawy bezpieczeństwa podczas zgromadzeń. Ponadto aplikacja pozwala na zdalny kontakt z parafią oraz podpięcie własnego kanału streamingowego.
+                            </p>
+                        </div>
+                    
+
+                        <div class="map col-6">
+                    
+                        </div>
+                    </div>
+
+ 
+                 </div>
+
+            </div>
+        </section>
+        
+
+        <section class="advantages" id="advantages">
+            <h1> Wady i Zalety Systemu </h1>
+            <div class="content row">
+                <div class="box right-box col-3">
+                    <img src="assets/cross.png" />
+                    <h1> Wady</h1>
+                    <ul class="ul-inside">
+                        <li> relatywnie duży koszt inwestycjigminy </li>
+                        <li> zmniejszy przepustowość wyjść</li>
+                        <li>problem zaznajomienia lokalnej społeczności z zasadami działania systemu, w szczególności osób
+                            starszych</li>
+                        <li> uzależnienie jakości działania systemu od ilości budynków/świątyń/miejsc kultu</li>
+                    </ul>
+                </div>
+                <div class="box left-box col-3">
+                    <img src="assets/ok-mark.png" />
+                    <h1>Zalety</h1>
+                    <ul class="ul-inside">
+                        <li> drobiazgowa kontrola obłożenia świątyń</li>
+                        <li> szereg udogodnień dla odwiedzających</li>
+                        <li>dane mogą przysłużyć się do wielu celów administracyjnych poza kontrolą obłożenia</li>
+                        <li> możliwość dogodnego uczestniczenia w obrzędach, szczególnie przez osoby chore (nie zakaźnie
+                            chore) oraz starsze</li>
+                        <li>możliwość późniejszego rozszerzenia o nowe funkcjonalności</li>
+                    </ul>
+                </div>
+    
+            </div>
+        </section>
+
+
+
     </div>
 
     <script src="js/app.js" type="text/javascript"></script>

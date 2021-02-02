@@ -558,6 +558,7 @@ p {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 4;
 }
 .header__container {
   display: flex;
@@ -669,10 +670,10 @@ p {
 }
 .open .content h1 {
   text-align: center;
-  margin: 8%;
+  margin: 8vh;
 }
 .open .content .open-container {
-  height: 60vh;
+  height: 100vh;
   display: flex;
   justify-content: space-around;
 }
@@ -694,12 +695,9 @@ p {
   text-justify: inter-word;
 }
 
-.futures {
-  height: 50vw;
-}
 .futures h1 {
   text-align: center;
-  margin: 10%;
+  margin: 10vh;
 }
 .futures .row {
   display: flex;
@@ -747,5 +745,182 @@ p {
   top: 10vh;
   text-align: center;
   font-size: 15px;
+}
+
+.architecture {
+  background-color: #F7F7F7;
+}
+.architecture h1 {
+  text-align: center;
+  margin: 10vh;
+}
+.architecture .container {
+  display: flex;
+  justify-content: center;
+}
+.architecture .container .scheme {
+  background-image: url(/assets/localsystem.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 600px;
+}
+.architecture .container .description {
+  display: flex;
+}
+.architecture .container .description p {
+  margin: 1vw;
+  font-size: 18px;
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.architecture .container .description .map {
+  background-image: url(/assets/mapa.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 400px;
+}
+.architecture .container .box {
+  background-color: white;
+  margin: 1vh;
+  display: flex;
+  padding: 0;
+}
+.architecture .container .box .txt {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.architecture .container .box .txt h1 {
+  font-size: 20px;
+  margin: 0px;
+}
+.architecture .container .box .img {
+  position: relative;
+}
+.architecture .container .box .img .image {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 20vh;
+  position: relative;
+  z-index: 2;
+}
+.architecture .container .cloud .txt {
+  justify-content: flex-end;
+}
+.architecture .container .cloud .txt h1::after {
+  background-color: #55DFB4;
+  content: "";
+  height: 2px;
+  width: 80%;
+  display: block;
+  margin: auto;
+  margin-top: 2vh;
+}
+.architecture .container .cloud .img {
+  background-color: #55DFB4;
+}
+.architecture .container .cloud .img .back {
+  height: 100%;
+}
+.architecture .container .cloud .img .back .image {
+  background-image: url(../../assets/cloud.png);
+}
+.architecture .container .local .txt h1::after {
+  background-color: #FB3B64;
+  content: "";
+  height: 2px;
+  width: 100%;
+  display: block;
+  margin: auto;
+  margin-top: 2vh;
+}
+.architecture .container .local .back-element {
+  position: absolute;
+  top: 0vh;
+  left: 17vw;
+  height: 65px;
+  width: 65px;
+  border-radius: 20%;
+  transform: rotate(20deg);
+  background-color: #FB3B64;
+}
+.architecture .container .local .image {
+  background-image: url(../../assets/cosmic-timetraveler-_R1cc2IHk70-unsplash.jpg);
+}
+.architecture .container .app .txt h1::after {
+  background-color: #FB3B64;
+  content: "";
+  height: 2px;
+  width: 100%;
+  display: block;
+  margin: auto;
+  margin-top: 2vh;
+}
+.architecture .container .app .image {
+  background-image: url(../../assets/iPhone2small.png);
+}
+.architecture .container .app .back-element {
+  position: absolute;
+  top: 2vh;
+  left: 10vw;
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  background-color: #08A6E4;
+}
+
+.advantages h1 {
+  text-align: center;
+  margin: 10vh;
+}
+.advantages .content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.advantages .content h1 {
+  text-align: center;
+  margin: 10px;
+}
+.advantages .content .box {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  border-radius: 10%;
+  position: relative;
+  margin-bottom: 100px;
+}
+.advantages .content .right-box {
+  border: solid 1px #FB3B64;
+  box-shadow: 1px 1px 11px #FB3B64;
+}
+.advantages .content .left-box {
+  border: solid 1px #55DFB4;
+  box-shadow: 1px 1px 11px #55DFB4;
+}
+.advantages .content ul ::marker {
+  content: none;
+}
+.advantages ul {
+  margin-bottom: 30px;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 1.5vw;
+  font-size: 12px;
+}
+.advantages div img {
+  position: absolute;
+  top: 0;
+  left: -2vw;
 }
 /*# sourceMappingURL=main.css.map */

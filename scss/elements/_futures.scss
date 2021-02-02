@@ -1,0 +1,55 @@
+@use "sass:list";
+.futures
+{
+    h1
+    {
+        text-align: center;
+        margin: 10vh;
+    }
+    .row
+    {
+        display:flex;
+        justify-content: space-between;
+        margin-bottom: 10%;
+        .column
+        {
+            position: relative;
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            .circle 
+            {
+                position: absolute;
+                top: 0; 
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+            }
+
+            @for $i from 1 through 6 
+            {
+                @debug($i);
+                .feature-#{$i}
+                {
+                    background-color: list.nth($futures-colors, $i);
+                }
+            }
+
+            img
+            {
+                position: absolute ;
+                top: 5%;
+                left: 48%;
+            }
+
+            p
+            {
+                position: absolute;
+                top: 10vh;
+                text-align: center;
+                font-size: 15px; 
+            }
+        }
+    }
+}
+
